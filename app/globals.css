@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .smooth-transition {
+    @apply ease-out duration-300 transition-all;
+  }
+
+  .max-width {
+    @apply container max-w-[1480px];
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,4 +34,80 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+/* Page Loader */
+.cp-spinner {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.cp-flip {
+  transform-style: preserve-3d;
+  perspective: 10em;
+}
+
+.cp-flip:before {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #ffffff;
+  opacity: 0.3;
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: cp-flip-animate-before 2s linear infinite;
+}
+
+@keyframes cp-flip-animate-before {
+  0% {
+    transform: rotateY(0) rotateX(0);
+  }
+  25% {
+    transform: rotateY(360deg) rotateX(0);
+  }
+  50% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+  75% {
+    transform: rotateY(0) rotateX(360deg);
+  }
+  100% {
+    transform: rotateY(0) rotateX(0);
+  }
+}
+
+.loader {
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 6px solid #a8a8ac;
+  border-right: 6px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  border-left: 6px solid #555964;
+  border-bottom: 6px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
