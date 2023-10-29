@@ -151,7 +151,9 @@ const QuickLinks: React.FC = () => {
               <li key={i} className={styles.transactionItem}>
                 <a
                   aria-label="link-on-chain-explorer"
-                  href={`/transactions/${name}/${txn.hash}`}
+                  href={
+                    txn.hash ? `/transactions/${name}/${txn.hash}` : txn.link
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.transactionLink}
