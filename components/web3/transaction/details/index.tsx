@@ -1,5 +1,7 @@
 import cx from 'classnames';
 
+import StatusBadge from '@/components/shared/badge/status';
+
 import { parseAddress } from '@/utils/parseAddress';
 import { formatTimestamp } from '@/utils/formatTimestamp';
 
@@ -130,9 +132,10 @@ const TransactionDetails: React.FC<TransactionDetailsProps> = ({
         </div>
 
         <div className={styles.cardFooter}>
-          <div className={cx(styles.status, statusColors[status])}>
+          {/* <div className={cx(styles.status, statusColors[status])}>
             {status}
-          </div>
+          </div> */}
+          <StatusBadge type={status} />
           <span className={styles.footerUsd}>(${amountInUsd})</span>
         </div>
       </div>

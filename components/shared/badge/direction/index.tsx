@@ -13,12 +13,16 @@ const styles: any = {
 };
 
 interface BadgeProps {
-  type: 'in' | 'out' | string; // If you anticipate other types, you can use the string type, else keep 'in' | 'out'
+  type: 'in' | 'out' | string;
   isLoading?: boolean;
   full?: boolean;
 }
 
-const Badge: React.FC<BadgeProps> = ({ type, isLoading, full = false }) => {
+const DirectionBadge: React.FC<BadgeProps> = ({
+  type,
+  isLoading,
+  full = false,
+}) => {
   if (isLoading) {
     return <div className={styles.loader}></div>;
   }
@@ -36,4 +40,4 @@ const Badge: React.FC<BadgeProps> = ({ type, isLoading, full = false }) => {
   );
 };
 
-export default Badge;
+export default DirectionBadge;

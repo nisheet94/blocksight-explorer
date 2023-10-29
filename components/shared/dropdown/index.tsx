@@ -18,7 +18,7 @@ const styles: Styles = {
   dropdownArrow: `absolute top-1/2 right-3 sm:right-4 lg:right-6 transform -translate-y-1/2 h-5 w-5 lg:h-6 lg:w-6 smooth-transition`,
   dropdownContainer: `z-10 absolute w-full mt-2 flex flex-col h-min bg-dropdown backdrop-blur-xl border-[.5px] border-secondary/[10%] rounded-xl`,
   dropdownOption: `group flex items-center justify-between gap-2 px-4 py-3 w-full smooth-transition`,
-  dropdownOptionLabel: `text-start tracking-[0.02em] pointer-events-none`,
+  dropdownOptionLabel: `text-start tracking-[0.02em] pointer-events-none capitalize`,
   dropdownOptionSelected: `text-secondary/20 cursor-not-allowed`,
   dropdownOptionUnselected: `text-secondary/40 hover:text-secondary/60`,
 };
@@ -181,7 +181,7 @@ export default function Dropdown({
         disabled={disabled}
       >
         {value && (
-          <span className="animate-fade-in">
+          <span className="animate-fade-in capitalize">
             {getSelectedOptionLabel(value)}
           </span>
         )}

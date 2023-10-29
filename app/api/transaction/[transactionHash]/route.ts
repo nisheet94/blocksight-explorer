@@ -107,7 +107,7 @@ export async function GET(
 ) {
   const isRateLimited = rateLimiter({
     windowMs: 2 * 60 * 1000, // 2 minutes in milliseconds
-    max: 10, // Max number of requests in the time window
+    max: 30, // Max number of requests in the time window
   })(request);
 
   if (isRateLimited instanceof NextResponse) {

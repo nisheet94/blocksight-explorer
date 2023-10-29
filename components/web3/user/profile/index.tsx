@@ -7,7 +7,7 @@ import WalletCard from '@/components/web3/user/card';
 import Dropdown from '@/components/shared/dropdown';
 import UserTransactions from '@/components/web3/user/transactions';
 import SearchBar from '@/components/shared/search';
-import Badge from '@/components/shared/badge';
+import DirectionBadge from '@/components/shared/badge/direction';
 
 import { useLatestBlock } from '@/hooks/useLatestBlock';
 import { useWalletDetails } from '@/hooks/useWalletDetails';
@@ -87,7 +87,7 @@ const SearchItem: React.FC<SearchItemProps> = ({ item, blockchain }) => {
     >
       <div className={styles.searchItemWrapper}>
         <div className={styles.searchItemBadge}>
-          <Badge isLoading={false} type={direction} full />
+          <DirectionBadge isLoading={false} type={direction} full />
         </div>
 
         <div className={styles.searchItemContent}>

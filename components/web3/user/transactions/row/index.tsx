@@ -1,9 +1,7 @@
 import React, { Fragment, useMemo } from 'react';
 
-import cx from 'classnames';
-
 import { RedirectIcon } from '@/components/shared/icons';
-import Badge from '@/components/shared/badge';
+import DirectionBadge from '@/components/shared/badge/direction';
 
 import { formatTimestamp } from '@/utils/formatTimestamp';
 import { parseAddress } from '@/utils/parseAddress';
@@ -11,11 +9,6 @@ import { parseAddress } from '@/utils/parseAddress';
 import { UserTransaction } from '@/types/transaction';
 import { Blockchain } from '@/types/blockchain';
 import { Styles } from '@/types/styles';
-
-const typeColor: any = {
-  in: 'text-[#00a186] bg-green-900/20 outline-[#00a186]/30',
-  out: 'text-[#d29922] bg-yellow-900/20 outline-[#d29922]/30',
-};
 
 const styles: Styles = {
   tableRow: `flex w-full h-[80px] shrink-0 hover:bg-secondary/[3%] smooth-transition`,
@@ -95,14 +88,7 @@ const TxnRow: React.ForwardRefRenderFunction<
         {/* Transaction Type */}
         <td className="w-1/6 overflow-hidden">
           <div className={styles.typeWrapper}>
-            {/* {isLoading ? (
-              <div className={styles.typeLoader}></div>
-            ) : (
-              <span className={cx(styles.typeText, typeColor[txn.direction])}>
-                {txn.direction}
-              </span>
-            )} */}
-            <Badge type={txn.direction} isLoading={isLoading} />
+            <DirectionBadge type={txn.direction} isLoading={isLoading} />
           </div>
         </td>
 

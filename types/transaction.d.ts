@@ -1,3 +1,5 @@
+import { Status } from '@/utils/constants/status';
+
 export type TransactionType = {
   txnHash: string;
   amountInEth: string;
@@ -10,7 +12,7 @@ export type TransactionType = {
   txnFeeInUSD: string;
   gasPriceInGwei: string;
   gasFeeInEth: string;
-  status: 'pending' | 'success' | 'failed';
+  status: Status;
 };
 
 export type UserTransaction = {
