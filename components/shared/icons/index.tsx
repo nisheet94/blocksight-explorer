@@ -1,3 +1,4 @@
+export { default as Error404 } from './404';
 export { default as ErrorIcon } from './error';
 export { default as CopyIcon } from './copy';
 export { default as EtherIcon } from './ethereum';
