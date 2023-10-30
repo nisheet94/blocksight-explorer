@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark bg-black">
       <body className={cx(sfPro.variable, inter.variable)}>
         <main className={styles.pageContainer}>
           <Navbar />
