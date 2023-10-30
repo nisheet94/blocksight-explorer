@@ -37,7 +37,7 @@ const styles: Styles = {
   transactionMessage: `italic`,
   transactionHash: `font-mono text-blue-500`,
   transactionStatus: `flex items-center gap-2`,
-  transactionStatusText: `sm:text-lg text-secondary/40`,
+  transactionStatusText: `text-secondary/40`,
 };
 
 const dropdownOptions = Object.entries(blockchains).map(
@@ -175,7 +175,9 @@ const QuickLinks: React.FC = () => {
                   </div>
 
                   <span className={styles.transactionStatus}>
-                    <span className={styles.t}>Status:</span>
+                    <span className={styles.transactionStatusText}>
+                      Status:
+                    </span>
                     <StatusBadge type={txn.type} small />
                   </span>
                 </a>
