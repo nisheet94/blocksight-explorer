@@ -1,3 +1,6 @@
+![Banner](https://github.com/nisheet94/web3-transactions-app/blob/main/Home-page.png)
+
+
 # BlockSight Explorer
 
 ## Introduction
