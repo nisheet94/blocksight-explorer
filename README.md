@@ -1,7 +1,10 @@
-![Banner](https://github.com/nisheet94/web3-transactions-app/blob/main/Home-page.png)
+![Banner](https://github.com/nisheet94/web3-transactions-app/blob/main/public/hero.png)
 
-
-# BlockSight Explorer
+<p align="center">  
+  <a href="https://web3-transactions-app.vercel.app/">View Demo</a>
+  |
+  <a href="https://github.com/nisheet94/web3-transactions-app/issues">Report Bug</a>
+</p>
 
 ## Introduction
 BlockSight Explorer is a robust application designed to fetch and display transactions from Ethereum and Polygon wallet addresses. The application inputs a wallet address and presents the transactions in an organized, explorer-like fashion, complete with balance information and detailed transaction data.
