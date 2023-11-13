@@ -53,17 +53,8 @@ Open http://localhost:3000 with your browser to see the result.
 2. Enter a wallet address to fetch transactions.
 3. View and interact with the transaction list and detailed pages.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
 ## Contributing
-Contributions are welcome! If you're interested in contributing, please read our Contributing Guidelines.
+Contributions, issues and feature requests are welcome. Feel free to check issues page if you want to contribute.
 
 ## Deploy on Vercel
 
@@ -72,5 +63,5 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Support and Contact
-For support or inquiries, please contact us at contact@nisheetchauhan.com or https://www.nisheetchauhan.com/contact.
+For support or inquiries, please contact at contact@nisheetchauhan.com or https://www.nisheetchauhan.com/contact.
 
